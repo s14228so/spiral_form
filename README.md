@@ -1,4 +1,4 @@
-# SpiralForm
+# SakuraRails
 Short description and motivation.
 
 ## Usage
@@ -13,12 +13,29 @@ gem 'spiral_form'
 
 And then execute:
 ```bash
-$ bundle
+$ bundle install
 ```
 
 Or install it yourself as:
 ```bash
 $ gem install spiral_form
+```
+
+app/assets/stylesheets/application.scss
+
+```scss
+@import 'spiral_form';
+ ```
+
+app/assets/javascripts/application.js
+
+```js
+//=require spiral_form
+ ```
+
+view_file
+```erb
+<%= spiral_form %>
 ```
 
 ## Contributing
