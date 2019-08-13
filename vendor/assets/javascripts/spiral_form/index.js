@@ -1,14 +1,11 @@
 //= require ./sub
 window.onload = () =>  {
-    let spiral = document.getElementById("spiral")
-    let formField = document.createElement("form")
-    formField.id = "formField"
+    let formField = document.getElementById("spiral")
     formField.action = "/items"
     formField.method = "post"
     formField.className = "container"
     let label = document.createElement("label")
     label.innerHTML = "商品名"
-    spiral.appendChild(formField)
     formField.appendChild(label)
     let input = document.createElement("input")
     input.name = "item[name]"
@@ -25,11 +22,6 @@ window.onload = () =>  {
     submit.innerHTML = "保存する"
     submit.className = "btn btn-sm btn-success"
     formField.appendChild(submit)
-    let token = document.createElement("input")
-    token.type ="hidden"
-    token.name = "authenticity_token"
-    token.value = "<%= form_authenticity_token %>"
-    formField.appendChild(token)
 
 
     //Vue.jsで書きたい。。。

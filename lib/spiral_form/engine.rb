@@ -1,6 +1,13 @@
+
+require 'spiral_form/helper'
 module SpiralForm
   class Engine < ::Rails::Engine
-   
+    isolate_namespace SpiralForm
+    initializer 'spiral_form.action_controller_helpers' do
+      ActiveSupport.on_load :action_controller do
+        include SpiralForm::Helper
+      end
+    end
   end
 end
 
